@@ -109,3 +109,9 @@ uuid如下图所示：
   
   - - -
   **csdn**: https://blog.csdn.net/weixin_43582101/article/details/100306681
+  
+- - - 
+- - -
+- - -
+09/05 更新：开启 smtp 服务，登出邮件通知。
+  ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190905131229885.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzU4MjEwMQ==,size_16,color_FFFFFF,t_70)
