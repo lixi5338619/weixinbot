@@ -111,6 +111,51 @@ uuid如下图所示：
   **csdn**: https://blog.csdn.net/weixin_43582101/article/details/100306681
   
 - - - 
+
+  
+  
+- - -
+#### 监控设置：    
+开启 smtp 服务，登出时邮件通知。   
+开启 @回复，可自行查询监听状况。
+
+- - -
+#### 代理ip：    
+提取类型： 每次请求提取一个https隧道IP。     
+使用时间： 每天早9点晚12点,自动开启代理ip。   
+代理规则： 代理ip存活时间15分钟。       
+消耗预算： 每日大约需要消耗60个IP。
+
+- - -
+#### 注意事项：
+```log         
+
+linux下参数设置：
+bot = Bot(console_qr=True  # 终端显示二维码 )  
+# console_qr 在大部分Linux 系统中可设为`True`或 2，
+# MacOS Terminal 的默认白底配色中，应设为 -2。
+
+Send_email = True   # 开启 登出邮件通知
+config_smtp中设置 收发邮件对象
+
+
+linux下itchat 源码修改事项：
+路径:/usr/local/lib/python3.5/site-packages/
+注释了 group.py 106行 用户初始化 log 信息
+创建了 itchat/components/config 文件 config_smtp.py
+增加了 itchat/components/login.py 中 SMTP 服务
+
+
+linux启动事项：  
+启动报错:lOG OUT。 解决方法：删除 wx.pkl 关闭缓存
+
+使用 screen命令 实现当前窗口与任务分离：
+新建窗口        screen -S wxbot
+会话分离        Ctrl+A D(即按住Ctrl，依次再按A,D)
+恢复会话窗口     screen -r wxbot
+杀死会话窗口     screen -X -S 10289 quit 
+```
+- - -
 - - -
 - - -
 09/05 更新：开启 smtp 服务，登出邮件通知。
