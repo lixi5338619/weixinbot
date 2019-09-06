@@ -136,7 +136,13 @@ bot = Bot(console_qr=True  # 终端显示二维码 )
 # MacOS Terminal 的默认白底配色中，应设为 -2。
 
 Send_email = True   # 开启 登出邮件通知
+文件位置: itchat/components/config/config_smtp.py
 config_smtp中设置 收发邮件对象
+
+邮件发出后，使用sheel命令关闭阻塞的py进程 -> embed(shell='p')
+本地: os.system('ps -e|grep run_wxbot.py |grep -v grep|cut -c 1-5|xargs kill -9')
+linux: ps -ef|grep run_wxbot.py |grep -v grep|cut -c 9-15|xargs kill -9 
+
 
 
 linux下itchat 源码修改事项：
